@@ -7,7 +7,6 @@ import {
   MenuItem,
   FormControl,
   Select,
-  Card,
 } from "@material-ui/core"
 import PlaceDetails from "../../PlaceDetails/PlaceDetails"
 
@@ -21,7 +20,7 @@ const List = ({ places , childClicked , isLoading, type,setType,rating,setRating
     const refs = Array(places?.length).fill().map((_,index) => elRefs[index] || createRef())
 
       setElRefs(refs)
- } , [places])
+ } , [elRefs ,places])
   
 
   return (
